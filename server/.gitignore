@@ -2,6 +2,7 @@
 /node_modules
 /tsconfig.tsbuildinfo
 *.DS_Store
+../.DS_Store
 /.idea
 
 .env

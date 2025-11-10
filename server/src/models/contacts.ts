@@ -6,8 +6,8 @@ exports.getAllContacts = function (callback: () => void) {
   db.query("SELECT * FROM contacts", callback);
 };
 
-exports.getContactById = function (id: number, callback: () => void) {
-  db.query("SELECT * FROM contacts WHERE contactId = ?", id, callback);
+exports.getContactById = function (id: number, callback: () => Contact) {
+  db.query("SELECT * FROM contacts WHERE id = ?", id, callback);
 };
 
 exports.createContact = function (contact: Contact, callback: () => void) {
@@ -20,12 +20,12 @@ exports.updateContact = function (
   callback: () => void
 ) {
   db.query(
-    "UPDATE contacts SET ? WHERE contactId = ?",
+    "UPDATE contacts SET ? WHERE id = ?",
     [updatedContact, id],
     callback
   );
 };
 
 exports.deleteContact = function (id: number, callback: () => void) {
-  db.query("DELETE FROM contacts WHERE contactId = ?", [id], callback);
+  db.query("DELETE FROM contacts WHERE id = ?", [id], callback);
 };
