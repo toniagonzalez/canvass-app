@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Header styles */
+.title {
+  color: #008080;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* SignIn */
+.addContactForm {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 10vw;
+}
+
+/* AddContact Button styles */
+.submitButton,
+.addContactButton {
+  width: 200px;
+  height: 30px;
+  color: #ffff;
+  background-color: #008080;
+  border: #008080 solid 1px;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+/* Contact list styles */
+.contactList {
+  border: 1px #f0f8ff solid;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  color: #000;
+  width: 100%;
+  height: auto;
+  min-height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+}
+
+/* Contact Card styles */
+.contactCard {
+  width: 200px;
+  height: 150px;
+  padding: 20px;
+  align-items: flex-start;
+  background-color: #fff;
+}
