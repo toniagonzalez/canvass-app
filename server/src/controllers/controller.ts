@@ -20,6 +20,7 @@ exports.getContactById = function (req: Request, res: Response) {
 };
 
 exports.createContact = function (req: Request, res: Response) {
+  console.log(req.body);
   const newContact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,

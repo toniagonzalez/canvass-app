@@ -64,6 +64,7 @@ database.connect((err) => {
 // Routes
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*"); // Allow all origins
+  res.header("Access-Control-Allow-Headers", "*"); // Allow headers
   next();
 });
 
@@ -71,6 +72,13 @@ app.use("/", routes);
 
 // Error middleware
 app.use(errorMiddleware);
+
+// Logger middleware
+app.use((req, res, next) => {
+  req.time = new Date(Date.now()).toString();
+  console.log(req.method, req.hostname, req.path, req.time);
+  next();
+});
 
 // Start the server
 app.listen(PORT, () => {
